@@ -136,7 +136,7 @@ async function dosofink() {
     return new Promise((resolve, reject) => {
     var getcoolloc = window.location.href
     var currento = getcoolloc.substr(getcoolloc.lastIndexOf('/') + 1);
-    if(currento == "team.html"){
+    if(currento == "team.html" || currento.includes("team")){
         function functeam() {
             return new Promise((resolve, reject) => {
                 var script = document.createElement('script');
@@ -155,7 +155,7 @@ async function dosofink() {
         }
             functeam()
             .then(funcmedia)
-    }else if(currento == "contact.html"){
+    }else if(currento == "contact.html" || currento.includes("contact")){
         function funccontact() {
             return new Promise((resolve, reject) => {
                 var script = document.createElement('script');
