@@ -68,8 +68,13 @@ html[xmlns] .clearfix {
 ul, li {
   padding: 0;
   margin: 0;
-  list-style: none;
 }
+
+ul.b{
+	list-style-type: disc;
+    list-style-position: inside;
+}
+
 
 header, nav, section, article, aside, footer, hgroup {
   display: block;
@@ -107,6 +112,7 @@ p {
   font-size: 15px;
   line-height: 26px;
   color: #212741;
+  padding-bottom: 20px;
 }
 
 img {
@@ -224,7 +230,7 @@ header
 --------------------------------------------- 
 */
 .background-header {
-  background-color: #212741;
+  background-color: #fff;
   height: 80px!important;
   position: fixed!important;
   top: 0!important;
@@ -302,10 +308,10 @@ header
 
 .header-area .main-nav .nav li a {
   display: block;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 14px;
-  text-transform: capitalize;
-  color: #fff;
+  text-transform: uppercase;
+  color: #111111;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -379,7 +385,7 @@ header
 
 .header-area .main-nav .nav li.has-sub ul.sub-menu {
   position: absolute;
-  width: 140px;
+  width: 240px;
   background-color: #fff;
   box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
   overflow: hidden;
@@ -561,6 +567,15 @@ header
   color: #ff511a;
 }
 
+.award-topon{
+	display: flex; 
+	justify-content: space-evenly;; 
+	align-items: end;
+	margin-top: -100px;
+}
+.award-topon div{
+	width: 38%;
+}
 @media (max-width: 1200px) {
   .header-area .main-nav .nav li {
     padding-left: 10px;
@@ -805,10 +820,19 @@ section.services {
 }
 
 .services .service-item {
+  position: relative;
   border-radius: 5px;
-  padding: 40px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
   margin-top: 30px;
+}
+
+.custome-service-item-note{
+	position: absolute;
+    bottom: 0px;
+    color: white;
+    background: #0000009e;
+    width: 100%;
+    padding-left: 5px;
 }
 
 .services .service-item:hover i {
@@ -1011,7 +1035,7 @@ calculator
 
 section.calculator {
   margin-top: 0px;
-  background-image: url(../images/calculator-bg.jpg);
+  background-image: url(../images/M-Legal-your-lawyers-by-your-side-scaled.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -1214,7 +1238,7 @@ page heading
 */
 
 .page-heading {
-  background-image: url(../images/heading-bg.jpg);
+  background-image: url(../images/wooden-gavel-books-wooden-table_93675-130700.avif);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1324,7 +1348,44 @@ section.what-we-do {
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
   margin-bottom: 30px;
   position: relative;
-  background: linear-gradient(45deg, #d5d67e, transparent);
+  background: #fff;
+}
+
+.custom-mah-item-pack{
+	display: flex;
+	align-items: center;
+}
+.custom-mah-item-l{
+	max-width: 200px;
+    overflow: hidden;
+    border-radius: 4px;
+}
+.custom-mah-item-r{
+	
+}
+
+.custom-mah-item-nm{
+	margin-bottom: 2px;
+}
+
+.custom-mah-social{
+	margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+	width: 125px;
+}
+
+.custom-mah-social a{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    transition: all 0.3s ease-in-out 0s;
+    border-radius: 4px;
+    background: rgb(135, 149, 164);
+	color: white;
 }
 
 .what-we-do .right-items .item em {
