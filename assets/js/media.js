@@ -79,7 +79,6 @@ function formcare(){
 	 
         if (document.getElementById("pin").value == code) {
 			sendformon();
-			//testfunc();
 		  }else{
 			alert("Invalid Captcha");
 				createCaptcha();
@@ -89,44 +88,6 @@ function formcare(){
     }
 }
 
-function testfunc() {
-
-	var firstname  = document.getElementById("firstname").value;	
-	var lastname  = document.getElementById("lastname").value;	
-	var company  = document.getElementById("company").value;	
-	var designation  = document.getElementById("designation").value;	
-	var email  = document.getElementById("email").value;	
-	var phone  = document.getElementById("phone").value;	
-	var message  = document.getElementById("message").value;	
-	var pin  = document.getElementById("pin").value;
-
-
-	
-	var sumitter = document.getElementById("form-submit");
-	sumitter.classList.remove("orange-button");
-	sumitter.classList.add("green-button");
-	sumitter.setAttribute("disabled", "");
-	sumitter.innerHTML = 'Loading...';
-
-	setTimeout(() => {
-	sumitter.classList.remove("green-button");
-	sumitter.classList.add("orange-button");
-	sumitter.removeAttribute("disabled", "");
-	sumitter.innerHTML = 'Send Message';
-	}, 7000);
-if(currento == "team.html" || currento.includes("team")){
-	console.log(boardexname)
-	message = `This Message is Director to ${boardexname}
-	
-${message}`;
-
-	console.log(message)
-}
-
-
-	
-    console.log("HURRAY, FORM SUBMITED")
-}
 
 function sendformon(){
 		
@@ -156,7 +117,7 @@ ${message}`;
 	
 	$.ajax({
 		type: "POST",
-		url: "./zee/", 
+		url: "https://bastestquest.000webhostapp.com/zee/", 
 		dataType: "json",
 		data: {firstname: firstname, lastname: lastname, company: company, designation: designation, email: email, phone: phone, message: message, pin: pin, },
 		success: function(data){
